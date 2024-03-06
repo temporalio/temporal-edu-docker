@@ -1,4 +1,4 @@
-image: axfelix/temporal-edu:0.1
+image: axfelix/temporal-edu:1.0
 tasks:
   - name: Terminal
     command: /bin/bash
