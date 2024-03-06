@@ -14,5 +14,6 @@ RUN apt update; \
 
 USER linuxbrew
 
-RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+RUN chmod -R 755 /home/linuxbrew; \
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
     /home/linuxbrew/.linuxbrew/bin/brew install tctl go temporal --ignore-dependencies
