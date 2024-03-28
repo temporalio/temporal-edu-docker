@@ -46,10 +46,11 @@ password (that value is something you've chosen, not anything in the
 1Password entry for DockerHub). Proceed to the next step after you see 
 a "Login Succeeded" message.
 
-Run this command to publish the image:
+Run this command to publish the image (replace `VERSION` here with the
+same value you replaced it with in the build command above).
 
 ```bash
-docker login --username temporaltech
+docker push temporalio/gitpod-edu:VERSION
 ```
 
 
