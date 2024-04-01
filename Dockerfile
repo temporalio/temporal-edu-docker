@@ -3,12 +3,11 @@ FROM ubuntu:jammy-20240212
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update; \
-    apt install -y --no-install-recommends openjdk-17-jdk openjdk-17-jre-headless curl git make maven sudo vim software-properties-common less locales; \
+    apt install -y --no-install-recommends openjdk-17-jdk openjdk-17-jre-headless python3-venv python3-pip curl git make maven sudo vim software-properties-common less locales; \
     /bin/bash -c "$(curl -fsSL https://deb.nodesource.com/setup_20.x | bash - )"; \
-    add-apt-repository ppa:deadsnakes/ppa; \
     apt update; \
-    apt install -y --no-install-recommends python3.12 nodejs; \
-    echo "alias python='python3.12'" >> /etc/bash.bashrc; \
+    apt install -y --no-install-recommends nodejs; \
+    echo "alias python='python3'" >> /etc/bash.bashrc; \
     echo "" >> /etc/bash.bashrc; \
     echo "PATH=/home/linuxbrew/.linuxbrew/bin:$PATH" >> /etc/bash.bashrc; \
     echo "" >> /etc/bash.bashrc; \
