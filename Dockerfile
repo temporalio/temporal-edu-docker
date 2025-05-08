@@ -3,7 +3,7 @@ FROM ubuntu:jammy-20240212
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update; \
-    apt install -y --no-install-recommends openjdk-17-jdk openjdk-17-jre-headless python3-venv python3-pip dotnet-sdk-8.0 curl git make maven sudo vim software-properties-common less locales; \
+    apt install -y --no-install-recommends openjdk-17-jdk openjdk-17-jre-headless python3-venv python3-pip dotnet-sdk-8.0 curl git make maven sudo vim software-properties-common less locales ruby ruby-dev ruby-bundler build-essential; \
     /bin/bash -c "$(curl -fsSL https://deb.nodesource.com/setup_20.x | bash - )"; \
     apt update; \
     apt install -y --no-install-recommends nodejs; \
